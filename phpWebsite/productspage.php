@@ -77,7 +77,7 @@ $conn->close();
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php">E-Braxthon Store</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -85,7 +85,7 @@ $conn->close();
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="productspage.php">All Products</a>
@@ -103,10 +103,10 @@ $conn->close();
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+                <a class="nav-link" href="checkout.php">Cart</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contactUs.php">Contact Us</a>
             </li>
              <h2 style="color: #7d5fff;">Welcome,<?php echo $usernameID; ?>!</h2>
             <li>
@@ -117,6 +117,18 @@ $conn->close();
         </ul>
     </div>
 </nav>
+
+<div class="toast" id="cartNotification" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000">
+    <div class="toast-header">
+        <strong class="mr-auto">Added to Cart</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Product has been added to your cart.
+    </div>
+</div>
 
     <!-- Products Page Content -->
     <div id="all-products" class="container mt-5">
@@ -141,6 +153,7 @@ $conn->close();
     <div id="product-container" class="container mt-5">
       <!-- Products will be displayed here -->
     </div>
+
     <!-- Cart Modal -->
 <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -159,7 +172,7 @@ $conn->close();
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Proceed to Checkout</button>
+                <button type="button " class="btn btn-primary" id="checkoutButton">Proceed to Checkout</button>
             </div>
         </div>
     </div>
@@ -167,13 +180,11 @@ $conn->close();
 
 
     <!-- Link to Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/js/category-filter.js"></script>
     <script src="assets/js/cart.js"></script>
-
 
 </body>
 </html>

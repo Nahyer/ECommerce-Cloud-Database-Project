@@ -30,19 +30,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="contactUs.php">Contact Us</a>
                 </li>
                 <li class="nav-item">
                      <a class="nav-link" href="signup.php">Register</a>

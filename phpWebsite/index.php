@@ -6,7 +6,22 @@
     <title>Welcome to Our E-Commerce Store</title>
     <!-- Link to Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -46,32 +61,13 @@ $conn->close();
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-            </li>
-            <li class="nav-item dropdown">
-                <!-- Add the "Categories" dropdown menu -->
-                <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categories
-                </a>
-                <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
-                    <!-- Populate the dropdown menu with categories from the database -->
-                    <?php foreach ($categories as $category): ?>
-                        <a class="dropdown-item" href="#"><?php echo $category["name"]; ?></a>
-                    <?php endforeach; ?>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contactUs.php">Contact Us</a>
             </li>
         </ul>
     </div>
 </nav>
 
-    <!-- Welcome Content -->
-    <div class="container mt-5">
+  <div class="container mt-5 content">
         <div class="jumbotron">
             <h1 class="display-4">Welcome to Our E-Commerce Store</h1>
             <p class="lead">Discover a wide range of products at great prices.</p>
@@ -79,6 +75,11 @@ $conn->close();
             <p><a class="btn btn-primary btn-lg" href="productspage.php" role="button">Browse Products</a></p>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Powered by Braxthon
+    </footer>
 
     <!-- Link to Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
